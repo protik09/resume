@@ -1,7 +1,7 @@
 tex_files = $(wildcard *.tex)
 pdf_files = $(patsubst %.tex,%.pdf,$(tex_files))
 
-%.pdf: %.tex $(wildcard resume/*.tex)
+%.pdf: %.tex $(wildcard resume/*.tex) awesome-cv.cls
 	xelatex $(<)
 	rm -f *.aux *.log *.out
 
