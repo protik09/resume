@@ -1,6 +1,6 @@
 tex_files = $(wildcard *.tex)
 pdf_files = $(patsubst %.tex,%.pdf,$(tex_files))
-cv_types = two_pages
+cv_types = one_page two_pages
 all_tex_files = $(tex_files) $(foreach x,$(cv_types),$(wildcard $(x)/*.tex))
 makefile_dep = Makefile.dep
 
